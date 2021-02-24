@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --branco: #F2F2F2;
+  --fonte: 'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+	vertical-align: baseline;
+}
+
+body{
+  background-color: var(--branco);
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column-generic{
+  display: flex;
+  flex-direction: column;
+}
+
+.grid{
+  display: grid;
+}
+
+.color-white-font-poppins{
+  color: var(--branco);
+  font-family: var(--fonte);
+}
+
+.pd-2r{
+  padding: 2rem;
+}
+
+/* SITE WRAPPER */
+.grid-template-area-site{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  'header header header'
+  'middle middle middle'
+  'footer footer footer'
+  ;
+}
+
+/*Cabeçalho principal*/
+#main-wrapper{
+  background: linear-gradient(rgba(30, 67, 126, 0.8),rgba(30, 67, 126, 0.8)),
+    url('../misc/images/mountainBack_Person.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 206.01vh;
+  height: 100vh;
+  max-width: 1365px;
+  max-height: 656px;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  grid-area: header;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 650px;
+  text-align: center;
+}
+
+.main-text{
+  font-size: 3.5rem;
+  font-family: 'Poppins';
+  font-weight: 600;
+  line-height: 4.5rem;
+  margin-bottom: 3rem;
+  letter-spacing: .05rem;
+}
+
+.main-button{
+  border: 0px;
+  background-color: #ffffff;
+  color: #122E40;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 15.25rem;
+  height: 3.25rem;
+  margin-top: 1rem;
+}
+
+.main-button:hover{
+  cursor: pointer;
+}
+
+/*Logo Style*/  
+#svg-icon{
+  width: 15rem;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+/*categories*/
+#section-categories{
+  justify-self: center;
+  margin-top: 40px;
+  width: 1170px;
+  grid-area: middle;
+}
+
+.smooth-grey{
+  color: #122E40;
+}
+
+.text-title{
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: var(--fonte);
+  text-shadow: 0px 0px 1px var(--branco);
+}
+
+.text-description{
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: var(--fonte);
+}
+
+/*Categories - Grid template config*/
+#plans-section{
+  grid-area: footer;
+}
+
+.grid-template-categories{
+  width: 100%;
+  height: 1000px;
+  max-width: 1170px;
+  max-height: 1000px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-areas: 
+  'img1 img2 img2'
+  'img3 img3 img3'
+  'img4 img4 img5'
+  ;
+}
+
+.grid-gap-categories{
+  gap: 25px;
+}
+
+.img1{
+  grid-area:img1;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.6)),
+    url('../misc/images/img01.jpg');
+}
+.img2{
+  grid-area:img2;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.6)),
+    url('../misc/images/img02.jpg');
+}
+.img3{
+  grid-area:img3;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.6)),
+    url('../misc/images/img03.jpg');
+  justify-content: center;
+}
+.img4{
+  grid-area:img4;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.6)),
+    url('../misc/images/img04.jpg');
+  align-items: flex-end;
+}
+.img5{
+  grid-area:img5;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.6)),
+    url('../misc/images/img05.jpg');
+}
+
+/*Graphic Bar config*/
+#plans-section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EEEEEC;
+}
+.grid-template-bar{
+  width: 185vh;
+  height: 65vh;
+  max-width: 85rem;
+
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 10fr 10fr;
+
+  grid-template-areas: 
+  'text text .... .... .... bar6'
+  '.... .... .... .... bar5 bar6'
+  '.... .... .... bar4 bar5 bar6'
+  '.... .... bar3 bar4 bar5 bar6'
+  '.... bar2 bar3 bar4 bar5 bar6'
+  'bar1 bar2 bar3 bar4 bar5 bar6'
+  'bar1 bar2 bar3 bar4 bar5 bar6'
+  ;
+}
+
+.gap-bar{
+  gap: 2rem;
+}
+
+.text-grid-bar{
+  grid-area: text;
+}
+
+.bar1{
+  grid-area: bar1;
+}
+.bar2{
+  grid-area: bar2;
+}
+.bar3{
+  grid-area: bar3;
+}
+.bar4{
+  grid-area: bar4;
+}
+.bar5{
+  grid-area: bar5;
+}
+.bar6{
+  grid-area: bar6;
+}
+
+.bar{
+  width: 100%;
+  height: 100%;
+  background-color: #2474E8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.info{
+  width: 100%;
+  height: 15vh;
+  background-color: #1B52A6;
+  padding: 1.2rem;
+}
+
+.text-title-bar{
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.details{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-line{
+  font-size: 12px;
+  padding: 10px;
+}
+
+@media (max-width: 1125px){
+  #main-wrapper{
+    width: 100%;
+    height: 100vh;
+    max-width: 1125px;
+    max-height: 656px;
+  }
+
+  #section-categories{
+    width: 100%;
+    max-width: 1125px;
+  }
+
+  #plans-section{
+    min-width: 100px;
+    max-width: 1125px;
+  } 
+
+  .grid-template-categories{
+    width: 95%;
+    height: 1000px;
+    max-width: 1125px;
+    max-height: 1000px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: 
+    'img1 img2 img2'
+    'img3 img3 img3'
+    'img4 img4 img5'
+    ;
+  }
+
+  .grid-template-bar{
+    width: 100%;
+    height: 65vh;
+    max-width: 85rem;
+  
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 10fr 10fr;
+    grid-template-areas: 
+    'text text .... .... .... bar6'
+    '.... .... .... .... bar5 bar6'
+    '.... .... .... bar4 bar5 bar6'
+    '.... .... bar3 bar4 bar5 bar6'
+    '.... bar2 bar3 bar4 bar5 bar6'
+    'bar1 bar2 bar3 bar4 bar5 bar6'
+    'bar1 bar2 bar3 bar4 bar5 bar6'
+    ;
+  }
+
+  .grid-template-area-site{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gap-bar{
+    gap: 1rem;
+  }
+
+  .bar{
+    min-width: 150px;
+    min-height: 200 px;
+  }
+}
+
+@media (max-width: 940px ){
+  #main-wrapper{
+    width: 100%;
+    height: 100vh;
+    max-width: 850px;
+    max-height: 656px;
+  }
+
+  #section-categories{
+    width: 100%;
+    max-width: 850px;
+  }
+
+  .grid-template-categories{
+    width: 95%;
+    height: 1000px;
+    max-width: 692px;
+    max-height: 1000px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: 
+    'img1 img2 img2'
+    'img3 img3 img3'
+    'img4 img4 img5'
+    ;
+  }
+  .img5 .text-title{
+    font-size: 30px;
+  }
+
+  .grid-template-bar{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+@media (max-width: 450px){
+  #main-wrapper{
+    width: 100vh;
+    height: 100vh;
+    min-width: 350px;
+    max-width: 450px;
+    min-height: 800px;
+    max-height: 800px;
+  }
+  #section-categories{
+    width: 100vh;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #plans-section{
+    width: 100vh;
+    max-width: 450px;
+  }
+
+  .grid-template-categories{
+    width: 95%;
+    height: 1000px;
+    max-width: 692px;
+    max-height: 1000px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
